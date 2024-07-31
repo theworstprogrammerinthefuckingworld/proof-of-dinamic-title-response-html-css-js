@@ -1,0 +1,160 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="UTF-8">
+         
+        <style> 
+          body{
+            background-color: rgb(255, 255, 255);
+          }
+            
+            
+            #sliderR, #sliderG, #sliderB {
+                width: 500px;
+            }
+            #titulo {
+                
+               font-family: Georgia, 'Times New Roman', Times, serif;
+                      
+                color: rgb(0, 0, 0);
+                
+                
+                text-shadow: 0px 1px 4px rgb(0, 0, 0);
+                
+                
+            }
+            button {
+              
+               border: 1px solid black;
+               color: rgb(255, 255, 255);
+               padding: 15px 32px;
+               text-align: center;
+               text-decoration: none;
+               display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+               
+                }
+           .button1 { background-color: #4CAF50; /* Green */}
+           .button2 {background-color: #008CBA;} /* Blue */
+            .button3 {background-color: #f44336;} /* Red */ 
+            .button4 { background-color: #6d706d; /* tema oscuro */}
+            .button5 { background-color: #ffffff; border: 1px solid rgb(255, 255, 255); /* tema claro */}
+        </style>
+    </head>
+    <body>
+        
+        
+        <h1 id="titulo">TITULO</h1>
+        
+        
+       
+        <button class="button3">R<input type="range" name="R" id="sliderR" min="0" max="255" value="0" oninput="updateValue()"></button> <br>
+        <button class="button1">G<input type="range" name="G" id="sliderG" min="0" max="255" value="0" oninput="updateValue()"></button> <br>
+        <button class="button2">B<input type="range" name="B" id="sliderB" min="0" max="255" value="0" oninput="updateValue()"></button> <br>
+        <button class="button3" input id="BR" onclick="Rojo()"> rojo </button>
+        <button class="button1" input id="BR" onclick="Verde()">verde</button>
+        <button class="button2" input id="BR" onclick="Azul()">azul</button> <br>
+        <button class="button4" input id="BR" onclick="temaOscuro()">Tema Oscuro</button>
+        <button class="button5" input id="tc" onclick="temaClaro()">Tema Claro, descubriste este easteregg</button>
+        
+
+
+
+
+        
+        <script> function updateValue()
+        
+        {
+            var r = document.getElementById("sliderR").value;
+            var g = document.getElementById("sliderG").value;
+            var b = document.getElementById("sliderB").value;
+            document.getElementById("titulo").style.color = "rgb(" + r + "," + g + "," + b +")";
+            
+            
+            
+            
+        }
+        
+        
+        
+        </script> 
+        <script> function Rojo()
+        {
+            var r = document.getElementById("sliderR").value = "255";
+            var g = document.getElementById("sliderG").value = "0";
+            var b = document.getElementById("sliderB").value = "0";
+            document.getElementById("titulo").style.color = "rgb(" + r + "," + g + "," + b +")";
+        }
+
+
+
+
+
+        </script>
+        <script> function Azul()
+            {
+                var r = document.getElementById("sliderR").value = "0";
+                var g = document.getElementById("sliderG").value = "0";
+                var b = document.getElementById("sliderB").value = "255";
+                document.getElementById("titulo").style.color = "rgb(" + r + "," + g + "," + b +")";
+            }
+    
+    
+    
+    
+    
+            </script>
+         
+         <script> function Verde()
+            {
+                var r = document.getElementById("sliderR").value = "0";
+                var g = document.getElementById("sliderG").value = "255";
+                var b = document.getElementById("sliderB").value = "0";
+                document.getElementById("titulo").style.color = "rgb(" + r + "," + g + "," + b +")";
+            }
+    
+    
+    
+    
+    
+            </script>
+             <script> function temaOscuro()
+        
+                {
+                    
+                  document.body.style.backgroundColor = "rgb(" + 53 + "," + 53 + "," + 53 +")";
+                  document.getElementById("tc").style.color = "rgb(" + 53 + "," + 53 + "," + 53 +")";
+                  document.getElementById("tc").style.border = "1px solid black";
+                  
+                    
+                    
+                    
+                    
+                }
+             
+             </script>
+              <script> function temaClaro()
+        
+                {
+                    
+                  document.body.style.backgroundColor = "rgb(" + 255 + "," + 255 + "," + 255 +")";
+                  
+                    
+                    
+                    
+                    
+                }
+             
+             </script>
+     
+     
+            
+        
+
+    </body>
+
+
+
+</html>
